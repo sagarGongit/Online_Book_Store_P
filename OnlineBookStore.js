@@ -1,16 +1,17 @@
-function OnlinebookStore(title,genre,author,name,nationality,price,birthYear) {
-              this.title = title;
-              this.genre = genre;
-              this.author = author;
-              this.name = name;
-              this.nationality = nationality;
-              this.price = price;
-              this.birthYear = birthYear;
-          
-        this.Book = function(title,genre,price) {
-            return "Title is "+this.title+" "+"genre "+this.genre+" "+"price "+this.price;
-        }
-}
+function createAuthor(name,birthYear,nationality) {
+            this.name = name;
+            this.birthYear = birthYear;
+            this.nationality = nationality;
+     }
+     function createBook(title,author) {
+             this.title = title;
+             this.author = author;
+     }
+      
+      let author1 = new createAuthor("Sagar",1890,"Australian");
+      let author2 = new createAuthor("Codechand",1890,"Indian");
 
- let s = new OnlinebookStore("the full moon","fragmented","premchand","Indian",200,1990);
-     s.Book();
+      let book1 = new createBook("The Spectacles",author1);
+      let book2 = new createBook("Coding Ke Dohe",author2);
+
+       console.log(book1);
